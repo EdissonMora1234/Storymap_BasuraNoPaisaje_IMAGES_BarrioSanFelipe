@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi StoryMap con Leyenda Dinámica</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="slides">
+                <!-- Diapositivas -->
+                <div class="slide" data-lat="4.664628" data-lng="-74.064095" data-zoom="18">
+                    <h2>Índice</h2>
+                    <div id="index"></div>
+                </div>
+                <!-- Más diapositivas según sea necesario -->
+
+                <div class="slide" data-lat="4.664628" data-lng="-74.064095" data-zoom="18">
+                    <h2>¿Cuál es el contexto previo a la intervención en el Parque de la Araña en el Barrio San Felipe?</h2>
+                    <figure>
+                        <img src="assets/images/parque.png" alt="Imagen 1">
+                        <figcaption>Parques de la Araña en el Barrio San Felipe antes de la intervención</figcaption> <!-- Título de la imagen -->
+                    </figure>
+                    <p>Actores: <u><strong style="color: red;">16</strong></u></p>
+                    <p>Residuos: <u><strong style="color: red;">93</strong></u></p>
+                    <p>Escenarios: <u><strong style="color: red;">31</strong></u></p>
+
+                    <p>El problema de basuras en la zona es complejo porque hay unas canecas muy pequeñas donde todos los restaurantes tienen que sacar y comerciantes tienen que sacar 
+                    la basura, por lo tanto una de las personas que trabaja en uno de los restaurantes, cuenta que a veces ella tiene que llevarse la basura a su casa para evitar que en 
+                    la madrugada cuando ya saca la basura aparezca regada y rota.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="backToIndexButton">Volver al Índice</div>
+            <div id="legend">
+                <button id="toggle-legend">Minimizar</button> <!-- Botón para minimizar la leyenda -->
+                <div id="legend-content">
+                    <!-- Aquí se generará el contenido de la leyenda dinámicamente -->
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="lib/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
