@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var layer = L.tileLayer.wms(wmsLayer.url, {
             layers: wmsLayer.layerName,
             format: 'image/png',
-            transparent: true
+            transparent: true,
+            maxZoom: 19, // Configurar el nivel de zoom máximo
+            minZoom: 0
         });
 
         // Añadir la capa al objeto de overlays con su nombre visible
